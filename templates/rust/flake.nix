@@ -31,8 +31,8 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            rust-bin.stable.latest.default
-            rust-analyzer
+            rust-bin.fromRustupToolChainFile
+            ./rust-toolchain.toml
             bacon
           ];
         };
