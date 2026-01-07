@@ -31,8 +31,7 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            rust-bin.fromRustupToolChainFile
-            ./rust-toolchain.toml
+            (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
             bacon
           ];
         };
